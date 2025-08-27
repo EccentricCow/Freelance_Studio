@@ -30,7 +30,7 @@ export class Login {
         this.commonErrorElement.style.display = 'none';
 
         if (ValidationUtils.validateForm(this.validations)) {
-            const loginResult = AuthService.logIn({
+            const loginResult = await AuthService.logIn({
                 email: this.emailElement.value,
                 password: this.passwordElement.value,
                 rememberMe: this.rememberMeElement.checked,

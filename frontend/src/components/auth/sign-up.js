@@ -43,7 +43,7 @@ export class SignUp {
             }
         }
         if (ValidationUtils.validateForm(this.validations)) {
-            const signupResult = AuthService.signUp({
+            const signupResult = await AuthService.signUp({
                 name: this.nameElement.value,
                 lastName: this.lastNameElement.value,
                 email: this.emailElement.value,
